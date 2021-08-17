@@ -1,0 +1,14 @@
+.admin-main {
+  display: flex;
+
+  &__sidenav {
+    min-height: calc(100vh - 70px);
+    background: #191c24;
+    font-weight: normal;
+    padding: 0;
+    width: 244px;
+    z-index: 11;
+    color: #fff;
+    overflow-y: auto;
+  }
+}
