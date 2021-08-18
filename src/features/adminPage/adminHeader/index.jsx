@@ -12,7 +12,7 @@ function AdminHeader() {
   return (
     <div className="container-fluid admin-header">
       <nav className="navbar">
-        <li>
+        <li onClick={() => console.log("menu clicked")}>
           <FaBars />
         </li>
         <li>

@@ -63,7 +63,7 @@ class AdminSidebar extends React.Component {
             /> */}
           </a>
         </div>
-        <ul className="nav">
+        <ul className="nav d-flex flex-column justify-content-start">
           <li className="nav-item profile">
             <div className="profile-desc">
               <div className="profile-pic">
