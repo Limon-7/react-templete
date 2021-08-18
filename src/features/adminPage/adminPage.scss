@@ -10,5 +10,29 @@
     z-index: 11;
     color: #fff;
     overflow-y: auto;
+    .menu-icon {
+      margin-right: 0.5rem;
+      font-size: 0.8125rem;
+      line-height: 1;
+      background: rgba(108, 114, 147, 0.2);
+      width: 31px;
+      height: 31px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+  }
+  &__dashboard {
+    width: calc(100vw - 344px);
+  }
+}
+
+@media (min-width: 992px) {
+  .side-nav-icon {
+    .admin-main__sidenav {
+      width: 344px;
+    }
   }
 }

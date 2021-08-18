@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import { Collapse, Dropdown } from "react-bootstrap";
+import { FaAdobe, FaAngleDown } from "react-icons/fa";
 import "./adminSidebar.scss";
 
 class AdminSidebar extends React.Component {
@@ -63,7 +64,7 @@ class AdminSidebar extends React.Component {
             /> */}
           </a>
         </div>
-        <ul className="nav d-flex flex-column justify-content-start">
+        <ul className="nav d-flex flex-column ">
           <li className="nav-item profile">
             <div className="profile-desc">
               <div className="profile-pic">
@@ -149,9 +150,9 @@ class AdminSidebar extends React.Component {
                 : "nav-item menu-items"
             }
           >
-            <Link className="nav-link" to="/dashboard">
+            <Link className="nav-link active" to="/dashboard">
               <span className="menu-icon">
-                <i className="mdi mdi-speedometer"></i>
+                <FaAdobe />
               </span>
               <span className="menu-title">Dashboard</span>
             </Link>
@@ -173,10 +174,10 @@ class AdminSidebar extends React.Component {
               data-toggle="collapse"
             >
               <span className="menu-icon">
-                <i className="mdi mdi-laptop"></i>
+                <FaAngleDown />
               </span>
               <span className="menu-title">Basic UI Elements</span>
-              <i className="menu-arrow"></i>
+              <FaAngleDown />
             </div>
             <Collapse in={this.state.basicUiMenuOpen}>
               <div>

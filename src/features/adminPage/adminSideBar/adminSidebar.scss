@@ -11,4 +11,43 @@
   height: 46px;
   border-radius: 0px 100px 100px 0px;
   cursor: pointer;
+
+  .nav .nav-item .nav-link {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0.8rem 10px 0.8rem 1.188rem;
+    color: #6c7293;
+    transition-duration: 0.45s;
+    transition-property: color;
+    -webkit-transition-property: color;
+    height: 46px;
+    border-radius: 0px 100px 100px 0px;
+    cursor: pointer;
+  }
+  .nav .nav-item > .nav-link.active::before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: #0090e7;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .sub-menu {
+    margin-bottom: 0;
+    /* margin-top: 0; */
+    padding: 0 0 0 3.25rem;
+    .nav-item .nav-link {
+      color: #6c7293;
+      padding: 0.5rem 0.35rem;
+      position: relative;
+      font-size: 0.855rem;
+      line-height: 1;
+      height: auto;
+    }
+  }
 }
+
+// .nav .nav-item > .nav-link

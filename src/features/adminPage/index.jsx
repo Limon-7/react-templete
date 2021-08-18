@@ -31,7 +31,7 @@ function AdminPage() {
   return (
     <section>
       <AdminHeader />
-      <div className="admin-main">
+      <div className="admin-main side-nav-icon">
         <div className="admin-main__sidenav">
           <AdminSidebar />
         </div>
