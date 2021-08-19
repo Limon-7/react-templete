@@ -41,6 +41,10 @@
     }
     &__main {
       width: calc(100vw - 70px);
+      &__header {
+        left: 70px;
+        width: 100%;
+      }
     }
   }
 }
@@ -51,6 +55,10 @@
     }
     &__main {
       width: 100% !important;
+      &__header {
+        left: 70px;
+        width: 100%;
+      }
     }
   }
 }

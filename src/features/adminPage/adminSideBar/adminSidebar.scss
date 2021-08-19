@@ -63,11 +63,10 @@
 }
 
 .sidebar .nav-item .nav-link .menu-arrow {
-  // font: normal normal normal 24px/1 "Material Design Icons";
   line-height: 1;
   font-size: 1rem;
   margin-left: auto;
-  color: rgba(108, 114, 147, 0.36);
+  color: #fff;
 }
 .sidebar .nav.sub-menu {
   margin-bottom: 0;
@@ -75,47 +74,91 @@
   padding: 0 0 0 3.25rem;
   list-style: none;
 }
-// mobile menu
+// icon menu
 @media (min-width: 992px) {
-  .sidebar-icon-only .sidebar .nav-item .nav-link .menu-title,
-  .sidebar-icon-only .sidebar .nav-item .nav-link .menu-arrow,
-  .sidebar-icon-only .sidebar .nav.sub-menu .nav-item .nav-link {
+  .sidebar-icon-only .sidebar .sidebar-brand-wrapper {
+    width: 70px;
+  }
+  .sidebar-icon-only .fixed-sidebar {
+    width: 70px;
+    background-color: black;
+  }
+  .sidebar-icon-only .nav-item .collapse,
+  .sidebar-icon-only .nav-item .collapsing {
     display: none;
   }
-  .sidebar-icon-only .sidebar .nav-item,
-  .sidebar-icon-only .sidebar .nav .nav-item {
-    position: relative;
-    padding: 0;
+  .sidebar-icon-only .sidebar {
+    .nav-item .nav-link .menu-arrow,
+    .nav-item .nav-link .menu-title {
+      display: none;
+    }
+    .nav-item {
+      position: relative;
+    }
+    .nav-item.menu-items.hover-open :hover {
+      .menu-title {
+        display: block;
+        position: absolute;
+        left: 70px;
+        z-index: 99999;
+      }
+      .nav.sub-menu {
+        display: block !important;
+      }
+    }
+    .nav-item.hover-open .collapse,
+    .nav-item.hover-open .collapsing {
+      overflow: visible !important;
+      display: block !important;
+      padding: 0.5rem 0;
+      border-radius: 0 0 5px 0;
+      background: #0f1015;
+      position: absolute;
+      left: 70px;
+      width: 190px;
+      z-index: 99999;
+    }
   }
-  .sidebar-icon-only .sidebar .nav-item .nav-link,
-  .sidebar-icon-only .sidebar .nav .nav-item .nav-link {
-    text-align: center;
-    justify-content: center;
-  }
-  .sidebar-icon-only .sidebar .nav-item.hover-open .nav-link {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    padding: 0.5rem 1.4rem;
-    left: 70px;
-    position: absolute;
-    text-align: left;
-    top: 0;
-    bottom: 0;
-    width: 190px;
-    z-index: 1;
-    line-height: 1.8;
-  }
-  .sidebar-icon-only .sidebar .nav-item.hover-open .collapse,
-  .sidebar-icon-only .sidebar .nav-item.hover-open .collapsing {
-    display: block;
-    padding: 0.5rem 0;
-    border-radius: 0 0 5px 0;
-    background: #fff;
-    position: absolute;
-    left: 70px;
-    width: 190px;
-  }
+
+  // .sidebar-icon-only .sidebar .nav-item .nav-link .menu-title,
+  // .sidebar-icon-only .sidebar .nav-item .nav-link .menu-arrow,
+  // .sidebar-icon-only .sidebar .nav.sub-menu .nav-item .nav-link {
+  //   display: none;
+  // }
+  // .sidebar-icon-only .sidebar .nav-item,
+  // .sidebar-icon-only .sidebar .nav .nav-item {
+  //   position: relative;
+  //   padding: 0;
+  // }
+  // .sidebar-icon-only .sidebar .nav-item .nav-link,
+  // .sidebar-icon-only .sidebar .nav .nav-item .nav-link {
+  //   text-align: center;
+  //   justify-content: center;
+  // }
+  // .sidebar-icon-only .sidebar .nav-item.hover-open .nav-link {
+  //   display: flex;
+  //   align-items: center;
+  //   background: #fff;
+  //   padding: 0.5rem 1.4rem;
+  //   left: 70px;
+  //   position: absolute;
+  //   text-align: left;
+  //   top: 0;
+  //   bottom: 0;
+  //   width: 190px;
+  //   z-index: 1;
+  //   line-height: 1.8;
+  // }
+  // .sidebar-icon-only .sidebar .nav-item.hover-open .collapse,
+  // .sidebar-icon-only .sidebar .nav-item.hover-open .collapsing {
+  //   display: block;
+  //   padding: 0.5rem 0;
+  //   border-radius: 0 0 5px 0;
+  //   background: #fff;
+  //   position: absolute;
+  //   left: 70px;
+  //   width: 190px;
+  // }
 }
 
 /* mobile menu */
@@ -134,5 +177,10 @@
   .active {
     left: 0;
     width: 100%;
+  }
+
+  .sidebar-icon-only .fixed-sidebar {
+    width: 70px;
+    background-color: black;
   }
 }

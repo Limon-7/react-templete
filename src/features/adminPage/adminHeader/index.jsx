@@ -14,7 +14,7 @@ function AdminHeader() {
     document.querySelector(".adminPage").classList.toggle("sidebar-icon-only");
   };
   return (
-    <div className="navbar p-0 d-flex align-items-center admin_header h-100">
+    <div className="navbar p-0 d-flex align-items-center admin_header h-100 w-100">
       {/* <div className=" d-flex d-lg-none align-items-center justify-content-center">
         <Link className="navbar-brand brand-logo-mini" to="/">
           <img

@@ -53,7 +53,7 @@ class AdminSidebar extends React.Component {
   render() {
     return (
       <nav className="sidebar sidebar-offcanvas">
-        <div className=" d-none d-lg-flex align-items-center justify-content-center fixed-sidebar">
+        <div className="  d-lg-flex align-items-center justify-content-center fixed-sidebar">
           <a className="sidebar-brand brand-logo" href="index.html">
             {/* <img src={require("../../assets/images/logo.svg")} alt="logo" /> */}
             <p style={{ color: "#111" }}>Infonet Associates</p>
