@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import { Collapse, Dropdown } from "react-bootstrap";
-import { FaAdobe, FaAngleDown } from "react-icons/fa";
+import { FaAdobe, FaBlackberry, FaAngleDown } from "react-icons/fa";
 import "./adminSidebar.scss";
 
 class AdminSidebar extends React.Component {
@@ -52,10 +52,11 @@ class AdminSidebar extends React.Component {
 
   render() {
     return (
-      <nav className="sidebar sidebar-offcanvas" id="sidebar">
-        <div className="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+      <nav className="sidebar sidebar-offcanvas">
+        <div className=" d-none d-lg-flex align-items-center justify-content-center fixed-sidebar">
           <a className="sidebar-brand brand-logo" href="index.html">
             {/* <img src={require("../../assets/images/logo.svg")} alt="logo" /> */}
+            <p style={{ color: "#111" }}>Infonet Associates</p>
           </a>
           <a className="sidebar-brand brand-logo-mini" href="index.html">
             {/* <img
@@ -64,7 +65,7 @@ class AdminSidebar extends React.Component {
             /> */}
           </a>
         </div>
-        <ul className="nav d-flex flex-column ">
+        <ul className=" d-flex flex-column sidebar-content">
           <li className="nav-item profile">
             <div className="profile-desc">
               <div className="profile-pic">
@@ -145,12 +146,12 @@ class AdminSidebar extends React.Component {
           </li>
           <li
             className={
-              this.isPathActive("/dashboard")
+              this.isPathActive("/admin/dashboard")
                 ? "nav-item menu-items active"
                 : "nav-item menu-items"
             }
           >
-            <Link className="nav-link active" to="/dashboard">
+            <Link className="nav-link active" to="/admin/dashboard">
               <span className="menu-icon">
                 <FaAdobe />
               </span>
@@ -177,7 +178,9 @@ class AdminSidebar extends React.Component {
                 <FaAngleDown />
               </span>
               <span className="menu-title">Basic UI Elements</span>
-              <FaAngleDown />
+              <span className="menu-arrow">
+                <FaAngleDown />
+              </span>
             </div>
             <Collapse in={this.state.basicUiMenuOpen}>
               <div>
@@ -242,7 +245,7 @@ class AdminSidebar extends React.Component {
               data-toggle="collapse"
             >
               <span className="menu-icon">
-                <i className="mdi mdi-playlist-play"></i>
+                <FaBlackberry />
               </span>
               <span className="menu-title">Form Elements</span>
               <i className="menu-arrow"></i>
@@ -261,185 +264,6 @@ class AdminSidebar extends React.Component {
                       to="/form-elements/basic-elements"
                     >
                       Basic Elements
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </Collapse>
-          </li>
-          <li
-            className={
-              this.isPathActive("/tables")
-                ? "nav-item menu-items active"
-                : "nav-item menu-items"
-            }
-          >
-            <div
-              className={
-                this.state.tablesMenuOpen
-                  ? "nav-link menu-expanded"
-                  : "nav-link"
-              }
-              onClick={() => this.toggleMenuState("tablesMenuOpen")}
-              data-toggle="collapse"
-            >
-              <span className="menu-icon">
-                <i className="mdi mdi-table-large"></i>
-              </span>
-              <span className="menu-title">Tables</span>
-              <i className="menu-arrow"></i>
-            </div>
-            <Collapse in={this.state.tablesMenuOpen}>
-              <div>
-                <ul className="nav flex-column sub-menu">
-                  <li className="nav-item">
-                    {" "}
-                    <Link
-                      className={
-                        this.isPathActive("/tables/basic-table")
-                          ? "nav-link active"
-                          : "nav-link"
-                      }
-                      to="/tables/basic-table"
-                    >
-                      Basic Table
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </Collapse>
-          </li>
-          <li
-            className={
-              this.isPathActive("/charts")
-                ? "nav-item menu-items active"
-                : "nav-item menu-items"
-            }
-          >
-            <div
-              className={
-                this.state.chartsMenuOpen
-                  ? "nav-link menu-expanded"
-                  : "nav-link"
-              }
-              onClick={() => this.toggleMenuState("chartsMenuOpen")}
-              data-toggle="collapse"
-            >
-              <span className="menu-icon">
-                <i className="mdi mdi-chart-bar"></i>
-              </span>
-              <span className="menu-title">Charts</span>
-              <i className="menu-arrow"></i>
-            </div>
-            <Collapse in={this.state.chartsMenuOpen}>
-              <div>
-                <ul className="nav flex-column sub-menu">
-                  <li className="nav-item">
-                    {" "}
-                    <Link
-                      className={
-                        this.isPathActive("/charts/chart-js")
-                          ? "nav-link active"
-                          : "nav-link"
-                      }
-                      to="/charts/chart-js"
-                    >
-                      Chart Js
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </Collapse>
-          </li>
-          <li
-            className={
-              this.isPathActive("/icons")
-                ? "nav-item menu-items active"
-                : "nav-item menu-items"
-            }
-          >
-            <div
-              className={
-                this.state.iconsMenuOpen ? "nav-link menu-expanded" : "nav-link"
-              }
-              onClick={() => this.toggleMenuState("iconsMenuOpen")}
-              data-toggle="collapse"
-            >
-              <span className="menu-icon">
-                <i className="mdi mdi-contacts"></i>
-              </span>
-              <span className="menu-title">Icons</span>
-              <i className="menu-arrow"></i>
-            </div>
-            <Collapse in={this.state.iconsMenuOpen}>
-              <div>
-                <ul className="nav flex-column sub-menu">
-                  <li className="nav-item">
-                    {" "}
-                    <Link
-                      className={
-                        this.isPathActive("/icons/mdi")
-                          ? "nav-link active"
-                          : "nav-link"
-                      }
-                      to="/icons/mdi"
-                    >
-                      Material
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </Collapse>
-          </li>
-          <li
-            className={
-              this.isPathActive("/user-pages")
-                ? "nav-item menu-items active"
-                : "nav-item menu-items"
-            }
-          >
-            <div
-              className={
-                this.state.userPagesMenuOpen
-                  ? "nav-link menu-expanded"
-                  : "nav-link"
-              }
-              onClick={() => this.toggleMenuState("userPagesMenuOpen")}
-              data-toggle="collapse"
-            >
-              <span className="menu-icon">
-                <i className="mdi mdi-security"></i>
-              </span>
-              <span className="menu-title">User Pages</span>
-              <i className="menu-arrow"></i>
-            </div>
-            <Collapse in={this.state.userPagesMenuOpen}>
-              <div>
-                <ul className="nav flex-column sub-menu">
-                  <li className="nav-item">
-                    {" "}
-                    <Link
-                      className={
-                        this.isPathActive("/user-pages/login-1")
-                          ? "nav-link active"
-                          : "nav-link"
-                      }
-                      to="/user-pages/login-1"
-                    >
-                      Login
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    {" "}
-                    <Link
-                      className={
-                        this.isPathActive("/user-pages/register-1")
-                          ? "nav-link active"
-                          : "nav-link"
-                      }
-                      to="/user-pages/register-1"
-                    >
-                      Register
                     </Link>
                   </li>
                 </ul>
@@ -466,7 +290,7 @@ class AdminSidebar extends React.Component {
               data-toggle="collapse"
             >
               <span className="menu-icon">
-                <i className="mdi mdi-lock"></i>
+                <FaBlackberry />
               </span>
               <span className="menu-title">Error Pages</span>
               <i className="menu-arrow"></i>
@@ -512,7 +336,7 @@ class AdminSidebar extends React.Component {
               target="_blank"
             >
               <span className="menu-icon">
-                <i className="mdi mdi-file-document-box"></i>
+                <FaBlackberry />
               </span>
               <span className="menu-title">Documentation</span>
             </a>
@@ -529,7 +353,8 @@ class AdminSidebar extends React.Component {
   componentDidMount() {
     this.onRouteChanged();
     // add class 'hover-open' to sidebar navitem while hover in sidebar-icon-only menu
-    const body = document.querySelector("body");
+    const body = document.querySelector(".adminPage");
+    console.log("body-------", body);
     document.querySelectorAll(".sidebar .nav-item").forEach((el) => {
       el.addEventListener("mouseover", function () {
         if (body.classList.contains("sidebar-icon-only")) {

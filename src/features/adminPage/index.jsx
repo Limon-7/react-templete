@@ -4,6 +4,8 @@ import AdminFooter from "./adminFooter";
 import AdminHeader from "./adminHeader";
 import AdminSidebar from "./adminSideBar/adminSidebar";
 
+import { FaSadCry } from "react-icons/fa";
+
 import "./adminPage.scss";
 
 const Menu1 = () => {
@@ -29,22 +31,24 @@ const Menu3 = () => {
 };
 function AdminPage() {
   return (
-    <section>
-      <AdminHeader />
-      <div className="admin-main side-nav-icon">
-        <div className="admin-main__sidenav">
-          <AdminSidebar />
+    <div className="adminPage d-flex no-wrap ">
+      <div id="sidebar" className="adminPage__sidebar">
+        <AdminSidebar />
+      </div>
+      <div className="adminPage__main">
+        <div className="adminPage__main__header">
+          <AdminHeader />
         </div>
-        <div className="admin-main__dashboard">
+        <div className="content-wrapper">
           <Switch>
-            <Route path="/admin/menu1" component={Menu1} />
+            <Route path="/admin/dashboard" component={Menu1} />
             <Route path="/admin/menu2" component={Menu2} />
             <Route path="/admin/menu3" component={Menu3} />
           </Switch>
           <AdminFooter />
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
