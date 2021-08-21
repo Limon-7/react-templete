@@ -66,15 +66,15 @@ class AdminSidebar extends React.Component {
           </a>
         </div>
         <ul className=" d-flex flex-column sidebar-content">
-          <li className="nav-item profile">
+          {/* <li className="nav-item profile">
             <div className="profile-desc">
               <div className="profile-pic">
                 <div className="count-indicator">
-                  {/* <img
+                  <img
                     className="img-xs rounded-circle "
                     src={require("../../assets/images/faces/face15.jpg")}
                     alt="profile"
-                  /> */}
+                  />
                   <span className="count bg-success"></span>
                 </div>
                 <div className="profile-name">
@@ -140,7 +140,7 @@ class AdminSidebar extends React.Component {
                 </Dropdown.Menu>
               </Dropdown>
             </div>
-          </li>
+          </li> */}
           <li className="nav-item nav-category">
             <span className="nav-link">Navigation</span>
           </li>
@@ -354,7 +354,7 @@ class AdminSidebar extends React.Component {
     this.onRouteChanged();
     // add class 'hover-open' to sidebar navitem while hover in sidebar-icon-only menu
     const body = document.querySelector(".adminPage");
-    console.log("body-------", body);
+    
     document.querySelectorAll(".sidebar .nav-item").forEach((el) => {
       el.addEventListener("mouseover", function () {
         if (body.classList.contains("sidebar-icon-only")) {

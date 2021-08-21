@@ -1,0 +1,13 @@
+.navbar-profile {
+	display: flex;
+	font-weight: 400;
+	align-items: center;
+	cursor: pointer;
+}
+
+.dropdown-toggle::after {
+	display: none !important;
+}
+.navbar-profile .navbar-profile-name {
+	margin: 0 !important;
+}
