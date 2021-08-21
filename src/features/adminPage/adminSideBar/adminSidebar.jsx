@@ -58,17 +58,8 @@ class AdminSidebar extends React.Component {
           <a className="sidebar-brand brand-logo" href="index.html">
             <img src={logo} alt="logo" />
           </a>
-          <a className="sidebar-brand brand-logo-mini" href="index.html">
-            {/* <img
-              src={require("../../assets/images/logo-mini.svg")}
-              alt="logo"
-            /> */}
-          </a>
         </div>
         <ul className=" d-flex flex-column sidebar-content">
-          <li className="nav-item nav-category">
-            <span className="nav-link">Navigation</span>
-          </li>
           <li
             className={
               this.isPathActive("/admin/dashboard")

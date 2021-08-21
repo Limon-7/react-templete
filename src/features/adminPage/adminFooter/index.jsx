@@ -8,25 +8,25 @@ function AdminFooter() {
           <span className="text-muted text-center text-sm-left d-block d-sm-inline-block">
             Copyright ©{" "}
             <a
-              href="https://www.bootstrapdash.com/"
+              href="https://www.infonetassociates.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              bootstrapdash.com{" "}
+              infonetassociates.com{" "}
             </a>
             2020
           </span>
           <span className="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
             Free{" "}
             <a
-              href="https://www.bootstrapdash.com/react-admin-templates/"
+              href="https://www.infonetassociates.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               {" "}
               react admin{" "}
             </a>{" "}
-            templates from BootstrapDash.com.{" "}
+            templates from infonetassociates.com.{" "}
           </span>
         </div>
       </div>
