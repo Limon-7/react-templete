@@ -1,28 +1,35 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
-import Footer from "../../common/components/footer";
+import { Redirect, Route, Switch } from "react-router-dom";
 import Navbar from "../../common/components/navbar";
 
-import "./publicPage.scss"
+import "./publicPage.scss";
 function PublicPage() {
   return (
     <div className="public-page">
       <Navbar />
       <div className="main">
-      <Switch>
-        <Route exact path="/" component={Home}/>
-      </Switch>
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Route path="/home2" component={Home2} />
+        </Switch>
       </div>
-      <i className="fab fa-adversal"></i>
-      <Footer />
     </div>
   );
 }
 
 export default PublicPage;
 
-function Home(){
-  return(
-    <div><h3>publick page</h3></div>
-  )
+function Home() {
+  return (
+    <div>
+      <h3>publick page</h3>
+    </div>
+  );
+}
+function Home2() {
+  return (
+    <div>
+      <h3>Menu 2 page page</h3>
+    </div>
+  );
 }
