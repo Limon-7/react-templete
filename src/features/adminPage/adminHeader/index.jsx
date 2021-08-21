@@ -1,7 +1,7 @@
 import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { FaBars, FaAlignJustify ,FaAngleDown} from "react-icons/fa";
-import { Link } from "react-router-dom";
+import profile from "../../../assets/images/profile.jpg"
 
 import "./adminHeader.scss";
 function AdminHeader() {
@@ -16,7 +16,7 @@ function AdminHeader() {
   };
   return (
     <div className="navbar p-0 d-flex align-items-center admin_header h-100">
-      <ul className="d-flex align-items-center justify-content-between w-100">
+      <ul className="d-flex align-items-center justify-content-between w-100 p-0 m-0">
       <li className="d-none d-lg-block d-xl-block">
         <button
           className="navbar-toggler"
@@ -38,8 +38,11 @@ function AdminHeader() {
       <Dropdown  as="li" className="nav-item m-r-2 d-inline-block">
               <Dropdown.Toggle as="a" className="nav-link cursor-pointer no-caret">
                 <div className="navbar-profile">
-                  {/* <img className="img-xs rounded-circle" src={require('../../assets/images/faces/face15.jpg')} alt="profile" /> */}
-                  <p className="navbar-profile-name">Limon </p>
+                  <img className="rounded-circle profile-img" src={profile} alt="profile" />
+                  <span className="navbar-profile-name">Limon </span>
+                  <span className="profile-arrow">
+                  <FaAngleDown/>
+                  </span>
                   
                 </div>
               </Dropdown.Toggle>

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import {FaBars} from "react-icons/fa"
+import logo from "../../../assets/images/logo.png"
 
 import "./navbar.scss"
 
@@ -50,7 +51,7 @@ function Navbar() {
 	  <nav className="navbar-public">
 		 <div className='nav-center'>
         <div className='nav-header'>
-          {/* <img src={logo} className='logo' alt='logo' /> */}
+          <img src={logo} className='logo' alt='logo' />
           <button className='nav-toggle' onClick={toggleLinks}>
             <FaBars />
           </button>

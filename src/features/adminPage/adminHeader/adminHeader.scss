@@ -1,13 +1,27 @@
-.navbar-profile {
-	display: flex;
-	font-weight: 400;
-	align-items: center;
-	cursor: pointer;
-}
-
-.dropdown-toggle::after {
-	display: none !important;
-}
-.navbar-profile .navbar-profile-name {
-	margin: 0 !important;
+.admin_header {
+	box-shadow: 1px 1px 5px #111;
+	.navbar-profile {
+		display: flex;
+		font-weight: 400;
+		align-items: center;
+		cursor: pointer;
+	}
+	.profile-img {
+		width: 35px;
+		height: 35px;
+		margin-right: 3px;
+	}
+	.dropdown-toggle::after {
+		display: none !important;
+	}
+	.navbar-profile .navbar-profile-name {
+		margin: 0 !important;
+	}
+	.profile-arrow {
+		transition: all 0.4s;
+	}
+	.show.dropdown .profile-arrow {
+		transform: rotate(180deg);
+		transition: all 0.4s;
+	}
 }

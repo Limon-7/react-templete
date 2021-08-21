@@ -45,8 +45,8 @@ function AdminPage() {
             <Route path="/admin/menu2" component={Menu2} />
             <Route path="/admin/menu3" component={Menu3} />
           </Switch>
-          <AdminFooter />
         </div>
+          <AdminFooter />
       </div>
     </div>
   );

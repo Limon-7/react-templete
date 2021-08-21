@@ -5,12 +5,13 @@
 	&__sidebar {
 		height: 100%;
 		width: 244px;
-		margin-top: 80px;
-		background: rgb(6, 146, 146);
+		margin-top: 70px;
+		background: #fff;
 	}
 	&__main {
 		position: relative;
 		width: calc(100vw - 244px);
+
 		&__header {
 			position: fixed;
 			top: 0;
@@ -26,10 +27,12 @@
 }
 .content-wrapper {
 	margin-top: 80px;
-	margin-left: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
 	padding: 10px;
-	background: rgb(194, 174, 174);
+	background: #fff;
 	min-height: 100%;
+	box-shadow: 1px 1px 5px #111;
 }
 
 // menu icon
@@ -55,6 +58,7 @@
 		}
 		&__main {
 			width: 100% !important;
+
 			&__header {
 				left: 70px;
 				width: calc(100% - 70px);
